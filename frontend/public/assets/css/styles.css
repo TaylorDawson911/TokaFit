@@ -1,0 +1,304 @@
+.banner {
+  /*height: 512px;*/
+  /*background: url("../../assets/img/clipboard-image-1.png");*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.link-item {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.banner .cta {
+  display: inline-block;
+  padding: 20px;
+  width: 50%;
+}
+
+.banner h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.banner p {
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+
+.banner .button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+/* Style the overview section */
+
+.overview {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.overview h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.overview ul {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.overview li {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.workout-types {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.workout-types h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.workout-types ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.workout-types li {
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 1.2em;
+}
+
+.workout-types h3 {
+  margin: 0;
+  font-size: 1.3em;
+}
+
+.workout-types a {
+  color: #333;
+  text-decoration: none;
+}
+
+.customization-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.customization-form h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.customization-form form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.customization-form form > * {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Style the progress tracker charts */
+
+.progress-tracker .card {
+  margin-bottom: 20px;
+}
+
+.progress-tracker .card-header {
+  font-size: 1.2em;
+}
+
+/* Style the schedule and progress tracking tool */
+
+.schedule-tool .card {
+  margin-bottom: 20px;
+}
+
+.schedule-tool .card-header {
+  font-size: 1.2em;
+}
+
+/* Style the login form */
+
+.login-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+.login-form h2 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.login-form form {
+  margin-top: 20px;
+}
+
+.login-form .form-group {
+  margin-bottom: 20px;
+}
+
+.login-form .form-control {
+  background-color: #fff;
+  color: #333;
+}
+
+.login-form .btn {
+  /*background-color: #ff0;*/
+  color: #333;
+}
+
+/* Style the register form */
+
+.register-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+.register-form h2 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.register-form form {
+  margin-top: 20px;
+}
+
+.register-form .form-group {
+  margin-bottom: 20px;
+}
+
+.register-form .form-control {
+  background-color: #fff;
+  color: #333;
+}
+
+.register-form .btn {
+  /*background-color: #14ff00;*/
+  color: #333;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 1em;
+}
+
+nav a {
+  color: white !important;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #f2f2f2;
+  background-color: #333;
+}
+
+main {
+  padding: 2em;
+}
+
+section {
+  background-color: white;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+.chatroom {
+  background-color: white;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.chatroom a {
+  color: blue;
+  text-decoration: none;
+}
+
+.chatroom a:hover {
+  text-decoration: underline;
+}
+
+.link-item {
+  background: #0d6efd;
+  color: white;
+  margin-right: 12px;
+}
+
