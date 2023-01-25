@@ -1,5 +1,5 @@
 import { useFormik } from "formik";
-import { basicSchema, loginSchema } from "../schemas";
+import { registerSchema, loginSchema } from "../schemas";
 import Axios from "axios";
 // add Access-Control-Allow-Origin header to the request
 
@@ -10,7 +10,7 @@ const onSubmit = async (values, actions) => {
     try {
         // add Access-Control-Allow-Origin header to the request
 
-        Axios.post("http://localhost:3001/login", {
+        Axios.post("http://localhost:3001/register", {
             email: values.email,
             password: values.password,
         }).then((response) => {
@@ -28,7 +28,8 @@ const onSubmit = async (values, actions) => {
   actions.resetForm();
 };
 
-const Login = () => {
+const Register = () => {
+  
     const {
         values,
         errors,
@@ -39,10 +40,13 @@ const Login = () => {
         handleSubmit,
       } = useFormik({
         initialValues: {
+          firstName: "",
+          lastName: "",
           email: "",
           password: "",
+          confirmPassword: "",
         },
-        validationSchema: loginSchema,
+        validationSchema: registerSchema,
         onSubmit,
         
       });
@@ -95,10 +99,42 @@ const Login = () => {
         //     </form>
         // </div>
         <div className="bodybase">
+          <input type="checkbox" id="showPassword" />
           <div className="login-form">
           
           <form onSubmit={handleSubmit}>
-          <h2>Login</h2>
+          <h2>Register</h2>
+          <div className="name-group form-group">
+
+            <div className="name-module" style={{marginRight:"4px"}}>
+                <p className="plabel" htmlFor="firstName">First Name</p>
+                <input 
+                type="text" 
+                id="firstName" 
+                values={values.firstName}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className= {errors.firstName && touched.firstName ? "input-error" : ""}
+                placeholder="Enter first name" />
+                {errors.firstName && touched.firstName && <p className="error">{errors.firstName}</p>}
+            </div>
+
+
+
+            <div className="name-module">
+                <p className="plabel" htmlFor="lastName">Last Name</p>
+                <input 
+                type="text" 
+                id="lastName" 
+                values={values.lastName}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className= {errors.lastName && touched.lastName ? "input-error" : ""}
+                placeholder="Enter first name" />
+                {errors.lastName && touched.lastName && <p className="error">{errors.lastName}</p>}
+                </div>
+            </div>
+
             <div className="form-group">
               <p className="plabel" htmlFor="email">Email</p>
               <input 
@@ -110,8 +146,8 @@ const Login = () => {
               className= {errors.email && touched.email ? "input-error" : ""}
               placeholder="Enter email" />
               {errors.email && touched.email && <p className="error">{errors.email}</p>}
-              
             </div>
+            
             <div className="form-group">
               <p className="plabel" htmlFor="password">Password</p>
               <input
@@ -127,16 +163,30 @@ const Login = () => {
               <p className="error">{errors.password}</p>
               )}
             </div>
+            
+
+            <div className="form-group">
+              <p className="plabel" htmlFor="confirmPassword">Confirm Password</p>
+              <input
+              id="confirmPassword"
+              type="password"
+              placeholder="Enter your password"
+              value={values.confirmPassword}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              className={errors.confirmPassword && touched.confirmPassword ? "input-error" : ""}
+              />
+              {errors.confirmPassword && touched.confirmPassword && (
+              <p className="error">{errors.confirmPassword}</p>
+              )}
+            </div>
             <div className="bottomForm">
               <p className="error" id="dberror"></p>
               <button className=""disabled={isSubmitting} type="submit">
                 Submit
               </button>
               <div className="centered">
-              <small><a href="#">Forgot your password?</a></small>
-              </div>
-              <div className="centered">
-              <small><a href="/register">Don't have an account? Sign up</a></small>
+              <small><a href="/login">Already have an account? Log in</a></small>
               </div>
             </div>
 
@@ -149,4 +199,4 @@ const Login = () => {
 }
 
 
-export default Login;
+export default Register;

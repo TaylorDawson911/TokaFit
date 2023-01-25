@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import {
   Home,
   Login,
+  Register,
   Workouts,
   Community,
   Nutrition,
@@ -66,6 +67,7 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
       <Route path="/community" element={<Community />} />
       <Route path="/workouts" element={<Workouts />} />
       <Route path="/Nutrition" element={<Nutrition />} />
